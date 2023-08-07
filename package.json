@@ -1,0 +1,36 @@
+{
+  "name": "rs-barber-shop",
+  "version": "1.0.0",
+  "description": "A theme with WordPress",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack  --watch",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robicse11127/rs-barber-shop.git"
+  },
+  "author": "RobizShow",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "cssnano": "^6.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "terser": "^5.18.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/robicse11127/rs-barber-shop/issues"
+  },
+  "homepage": "https://github.com/robicse11127/rs-barber-shop#readme"
+}

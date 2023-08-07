@@ -1,0 +1,22 @@
+@mixin fonts( $base-font: 1rem ) {
+	font-size: $base-font;
+	line-height: $base-line-height;
+}
+
+@each $key, $val in $fontSizes {
+	.font-size-#{$key} {
+		@include fonts( $val );
+	}
+}
+
+@each $key, $val in $lineHeights {
+	.line-height-#{$key} {
+		line-height: $val;
+	}
+}
+
+@each $key, $val in $colors {
+	.font-color-#{$key} {
+		color: $val;
+	}
+}
