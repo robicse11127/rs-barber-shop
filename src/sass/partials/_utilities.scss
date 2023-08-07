@@ -1,0 +1,208 @@
+@use 'sass:math';
+
+$utilities: (
+	'text-align': (
+		'prefix': 'text-align',
+		'values': (
+			'center': center,
+			'left': left,
+			'right': right
+		),
+	),
+	"padding": (
+		"prefix": "p",
+		"values": (
+			"0": 0,
+			"1": $base-padding,
+			"2": $base-padding * 2,
+			"3": $base-padding * 3,
+			"4": $base-padding * 4,
+			"5": $base-padding * 5,
+			"6": $base-padding * 6,
+			"7": $base-padding * 7,
+			"8": $base-padding * 8,
+			"9": $base-padding * 9,
+			"10": $base-padding * 10
+		),
+	),
+	"padding-left": (
+		"prefix": "pl",
+		"values": (
+			"0": 0,
+			"1": $base-padding,
+			"2": $base-padding * 2,
+			"3": $base-padding * 3,
+			"4": $base-padding * 4,
+			"5": $base-padding * 5,
+			"6": $base-padding * 6,
+			"7": $base-padding * 7,
+			"8": $base-padding * 8,
+			"9": $base-padding * 9,
+			"10": $base-padding * 10
+		),
+	),
+	"padding-right": (
+		"prefix": "pr",
+		"values": (
+			"0": 0,
+			"1": $base-padding,
+			"2": $base-padding * 2,
+			"3": $base-padding * 3,
+			"4": $base-padding * 4,
+			"5": $base-padding * 5,
+			"6": $base-padding * 6,
+			"7": $base-padding * 7,
+			"8": $base-padding * 8,
+			"9": $base-padding * 9,
+			"10": $base-padding * 10
+		),
+	),
+	"padding-top": (
+		"prefix": "pt",
+		"values": (
+			"0": 0,
+			"1": $base-padding,
+			"2": $base-padding * 2,
+			"3": $base-padding * 3,
+			"4": $base-padding * 4,
+			"5": $base-padding * 5,
+			"6": $base-padding * 6,
+			"7": $base-padding * 7,
+			"8": $base-padding * 8,
+			"9": $base-padding * 9,
+			"10": $base-padding * 10
+		),
+	),
+	"padding-bottom": (
+		"prefix": "pb",
+		"values": (
+			"0": 0,
+			"1": $base-padding,
+			"2": $base-padding * 2,
+			"3": $base-padding * 3,
+			"4": $base-padding * 4,
+			"5": $base-padding * 5,
+			"6": $base-padding * 6,
+			"7": $base-padding * 7,
+			"8": $base-padding * 8,
+			"9": $base-padding * 9,
+			"10": $base-padding * 10
+		),
+	),
+	"margin": (
+		"prefix": "m",
+		"values": (
+			"0": 0,
+			"1": $base-margin,
+			"2": $base-margin * 2,
+			"3": $base-margin * 3,
+			"4": $base-margin * 4,
+			"5": $base-margin * 5,
+			"10": $base-margin * 10,
+		),
+	),
+	"margin-left": (
+		"prefix": "ml",
+		"values": (
+			"0": 0,
+			"1": $base-margin,
+			"2": $base-margin * 2,
+			"3": $base-margin * 3,
+			"4": $base-margin * 4,
+			"5": $base-margin * 5,
+			"10": $base-margin * 10,
+		),
+	),
+	"margin-right": (
+		"prefix": "mr",
+		"values": (
+			"0": 0,
+			"1": $base-margin,
+			"2": $base-margin * 2,
+			"3": $base-margin * 3,
+			"4": $base-margin * 4,
+			"5": $base-margin * 5,
+			"10": $base-margin * 10
+		),
+	),
+	"margin-top": (
+		"prefix": "mt",
+		"values": (
+			"0": 0,
+			"1": $base-margin,
+			"2": $base-margin * 2,
+			"3": $base-margin * 3,
+			"4": $base-margin * 4,
+			"5": $base-margin * 5,
+			"10": $base-margin * 10,
+		),
+	),
+	"margin-bottom": (
+		"prefix": "mb",
+		"values": (
+			"0": 0,
+			"1": $base-margin,
+			"2": $base-margin * 2,
+			"3": $base-margin * 3,
+			"4": $base-margin * 4,
+			"5": $base-margin * 5,
+			"10": $base-margin * 10
+		),
+	),
+	"color": (
+		"prefix": "text-color",
+		"values": (
+			"primary": map-get( $colors, 'primary-text' ),
+			"secondary": map-get( $colors, 'secondary-text' ),
+			"white": map-get( $colors, 'white' ),
+		)
+	),
+	"background": (
+		"prefix": "bg",
+		"values": (
+			"primary": map-get( $colors, 'primary' ),
+			"secondary": map-get( $colors, 'secondary' ),
+			"white": map-get( $colors, 'white' ),
+			"gray": map-get( $colors, 'gray' ),
+			"lite-gray": map-get( $colors, 'lite-gray' ),
+			'gradient': $base-gradient
+		)
+	),
+	"box-shadow": (
+		"prefix": "bs",
+		"values": (
+			"base": map-get( $boxShadows, 'base' ),
+			"md": map-get( $boxShadows, 'md' ),
+			"lg": map-get( $boxShadows, 'lg' )
+		)
+	),
+	"border-radius": (
+		"prefix": "br",
+		"values": (
+			"base": map-get( $borderRadius, 'base' ),
+			"sm": map-get( $borderRadius, 'sm' ),
+			"md": map-get( $borderRadius, 'md' ),
+			"lg": map-get( $borderRadius, 'lg' ),
+			"xl": map-get( $borderRadius, 'xl' ),
+			"xxl": map-get( $borderRadius, 'xxl' ),
+		)
+	),
+);
+
+// generate utility classes
+@each $property, $map in $utilities {
+	$prefix: map-get($map, "prefix");
+	$values: map-get($map, "values");
+
+	@each $k, $v in $values {
+		@if($k == "default") {
+			.#{$prefix} {
+				#{$property}: $v;
+			}
+		} @else {
+			.#{$prefix}-#{$k}{
+				#{$property}: $v;
+			}
+		}
+	}
+}

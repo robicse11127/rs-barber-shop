@@ -1,0 +1,100 @@
+// max layout width.
+$max-width: 960px;
+// colors.
+$primary: #e27730;
+$secondary: #f8f8f8;
+$white: #fff;
+$blue: #036aab;
+$gray: #bbb;
+$lite-gray: #ddd;
+
+// text colors;
+$primary-text: #444;
+$secondary-text: #777;
+$hint-text: #aaa;
+
+// color schema.
+$colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'white': $white,
+    'blue': $blue,
+    'gray': $gray,
+    'lite-gray': $lite-gray,
+    'primary-text': $primary-text,
+    'secondary-text': $secondary-text,
+    'hint-text': $hint-text,
+);
+
+// padding, margin.
+$base-padding: 0.625rem; // 10px
+$base-margin: 0.625rem; // 10px
+
+// borders.
+$base-border-thickness: 1px;
+$base-border-radius: 3px;
+
+$borderRadius: (
+    'base': $base-border-radius,
+    'sm': $base-border-radius * 2,
+    'md': $base-border-radius * 3,
+    'lg': $base-border-radius * 4,
+    'xl': $base-border-radius * 5,
+    'xxl': $base-border-radius * 10,
+);
+
+// box shadow.
+$base-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.15);
+$base-box-shadow-md: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+$base-box-shadow-lg: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+
+// Box Shadow Map.
+$boxShadows: (
+    'base': $base-box-shadow,
+    'md': $base-box-shadow-md,
+    'lg': $base-box-shadow-lg,
+);
+
+// gradient.
+$base-gradient: linear-gradient( 180deg, map-get( $colors, 'secondary' ) 0%, map-get( $colors, 'white' ) 100% );
+
+// typography.
+$base-font-size-xs: 0.625rem; // 10px
+$base-font-size-sm: 0.875; // 14px
+$base-font-size: 1rem; // 16px
+$base-font-size-pre-md: 1.125rem; // 18px
+$base-font-size-md: 1.25rem; // 20px
+$base-font-size-lg: 1.5rem; // 24px
+$base-font-size-xl: 2rem; // 32px
+$base-font-size-xxl: 3rem; // 48px
+
+// Font size map.
+$fontSizes: (
+    'base': $base-font-size,
+    'xs': $base-font-size-xs,
+    'sm': $base-font-size-sm,
+    'md': $base-font-size-md,
+    'lg': $base-font-size-lg,
+    'xl': $base-font-size-xl,
+    'xxl': $base-font-size-xxl,
+);
+
+$base-line-height: 1.5rem; // 24px
+$base-line-height-md: 1.75rem; // 28px
+$base-line-height-xl: 1.875rem; // 30px
+$base-line-height-xxl: 2.25rem; // 36px
+
+// Line height Map.
+$lineHeights: (
+    'base': $base-line-height,
+    'md': $base-line-height-md,
+    'xl': $base-line-height-xl,
+    'xxl': $base-line-height-xxl,
+);
+
+$default-font-weight: 400;
+$heavy-font-weight: 700;
+
+// buttons.
+$btn-base-width: 290px;
+$btn-font-weight: 700;
