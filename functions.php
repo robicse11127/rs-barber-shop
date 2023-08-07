@@ -114,7 +114,14 @@ add_action( 'after_setup_theme', 'rsbs_theme_content_width', 0 );
  * Enqueue public scripts and styles.
  */
 function rsbs_theme_public_scripts() {
+	$filename = get_template_directory() . '/dist/css/main.css';
+	wp_register_style( 'rsbs-theme-main', get_template_directory_uri() . '/dist/css/main.css', [], filemtime( $filename ) , 'all' );
 
+	$filename = get_template_directory() . '/dist/js/main.js';
+	wp_register_script( 'rsbs-theme-main', get_template_directory_uri() . '/dist/js/main.js', [ 'jquery' ], filemtime( $filename ), true );
+
+	wp_enqueue_style( 'rsbs-theme-main' );
+	wp_enqueue_script( 'rsbs-theme-main' );
 }
 add_action( 'wp_enqueue_scripts', 'rsbs_theme_public_scripts' );
 
@@ -125,4 +132,5 @@ function rsbs_theme_admin_scripts() {
 
 }
 add_action( 'admin_enqueue_scripts', 'rsbs_theme_admin_scripts' );
+
 

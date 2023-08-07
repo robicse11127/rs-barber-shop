@@ -1,29 +1,24 @@
 // max layout width.
-$max-width: 960px;
+$max-width: 1100px;
 // colors.
-$primary: #e27730;
-$secondary: #f8f8f8;
+$primary: #014d55;
 $white: #fff;
-$blue: #036aab;
-$gray: #bbb;
-$lite-gray: #ddd;
+$dark: #000;
+$lite: #eff3f1;
+
 
 // text colors;
-$primary-text: #444;
+$primary-text: #000;
 $secondary-text: #777;
-$hint-text: #aaa;
 
 // color schema.
 $colors: (
     'primary': $primary,
-    'secondary': $secondary,
     'white': $white,
-    'blue': $blue,
-    'gray': $gray,
-    'lite-gray': $lite-gray,
+    'dark': $dark,
+    'lite': $lite,
     'primary-text': $primary-text,
     'secondary-text': $secondary-text,
-    'hint-text': $hint-text,
 );
 
 // padding, margin.

@@ -1,0 +1,50 @@
+.rsbs-primary-header-menu {
+	border-bottom: 1px solid map-get($colors, 'lite' );
+	.rsbs-menu {
+		display: none;
+		position: absolute;
+		background: map-get( $colors, 'white' );
+		border: 1px solid map-get( $colors, 'lite' );
+		width: 210px;
+		top: 60px;
+		border-radius: $base-border-radius;
+		box-shadow: $base-box-shadow;
+		.menu-item {
+			display: inline-block;
+			width: 100%;
+			text-align: right;
+		}
+		a {
+			display: block;
+			padding: 12px 16px;
+			font-size: $base-font-size-md;
+			color: map-get( $colors, 'dark' );
+			border-bottom: 1px solid map-get( $colors, 'lite' );
+		}
+	}
+	.rsbs-menu-toggle-icon {
+		cursor: pointer;
+	}
+
+	@include md {
+		.rsbs-menu {
+			display: flex;
+			position: relative;
+			width: 100%;
+			top: 0;
+			box-shadow: none;
+			border: 0;
+			border-radius: 0;
+			.menu-item {
+				display: inline;
+			}
+			a {
+				display: inline;
+				border: 0;
+			}
+		}
+		.rsbs-menu-toggle-icon {
+			display: none;
+		}
+	}
+}
