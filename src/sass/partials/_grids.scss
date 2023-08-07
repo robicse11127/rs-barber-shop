@@ -20,11 +20,12 @@ $layouts: flex-start, flex-end, center, space-between, space-around;
 	margin: 0 auto;
 	padding: 0 30px;
 	box-sizing: border-box;
-	
+	display: flex;
 }
 .row {
 	display: flex;
 	flex-flow: row wrap;
+	width: 100%;
 }
 
 // grid gaps.
@@ -41,7 +42,16 @@ $layouts: flex-start, flex-end, center, space-between, space-around;
 // justify content classes.
 @each $val in $layouts {
 	.justify-#{$val} {
+		display: inherit;
 		justify-content: $val;
+	}
+}
+
+// align content classes.
+@each $val in $layouts {
+	.align-items-#{$val} {
+		display: inherit;
+		align-items: $val;
 	}
 }
 
