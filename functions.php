@@ -93,6 +93,13 @@ if ( ! function_exists( 'rsbs_theme_setup' ) ) {
 		) );
 
 		add_filter( 'show_admin_bar', '__return_false' );
+
+		/**
+		 * WooCommerce Support
+		 */
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
 	}
 }
 add_action( 'after_setup_theme', 'rsbs_theme_setup' );
@@ -132,5 +139,3 @@ function rsbs_theme_admin_scripts() {
 
 }
 add_action( 'admin_enqueue_scripts', 'rsbs_theme_admin_scripts' );
-
-

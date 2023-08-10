@@ -9,10 +9,19 @@
 		top: 60px;
 		border-radius: $base-border-radius;
 		box-shadow: $base-box-shadow;
+
 		.menu-item {
+			position: relative;
 			display: inline-block;
 			width: 100%;
 			text-align: right;
+
+			&.menu-item-has-children::after {
+				content: "\25bc";
+				position: absolute;
+				bottom: 28px;
+				right: -3px;
+			}
 		}
 		a {
 			display: block;
@@ -31,16 +40,48 @@
 			display: flex;
 			position: relative;
 			width: 100%;
+			height: 80px;
 			top: 0;
 			box-shadow: none;
 			border: 0;
 			border-radius: 0;
+			align-items: center;
 			.menu-item {
-				display: inline;
+				display: flex;
+				height: inherit;
+				align-items: center;
+				width: 100%;
+
+				.sub-menu {
+					display: none;
+					flex-direction: column;
+					width: 200px;
+					position: absolute;
+					top: 80px;
+					right: 0;
+					background: $white;
+					border-radius: $base-border-radius;
+					box-shadow: $base-box-shadow-md;
+					.menu-item a {
+						display: block;
+						width: 100%;
+						text-align: center;
+						padding: 15px;
+						color: $dark;
+						border-bottom: 1px solid $lite;
+						text-decoration: none;
+					}
+				}
+	
+				&:hover .sub-menu {
+					display: flex;
+				}
 			}
 			a {
 				display: inline;
 				border: 0;
+				width: 100%;
+				text-align: center;
 			}
 		}
 		.rsbs-menu-toggle-icon {

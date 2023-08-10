@@ -11,7 +11,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class() ?>>
-		<header class="rsbs-primary-header-menu pt-2 pb-2">
+		<header class="rsbs-primary-header-menu">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-xs-6 col-md-4 rsbs-logo justify-flex-start">
