@@ -1,0 +1,44 @@
+.rsbs-footer-wrapper {
+	.rsbs-footer-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.rsbs-footer-tagline {
+			display: block;
+			max-width: 40%;
+			font-size: $base-font-size-pre-md;
+			font-style: italic;
+			text-align: center;
+			color: $secondary-text;
+			line-height: $base-line-height-xl;
+		}
+	}
+	.rsbs-footer-socials {
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			li {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				a {
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					margin: 0 10px;
+				}
+			}
+		}
+	}
+	.rsbs-footer-bottom {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $dark;
+		color: $white;
+	}
+}
